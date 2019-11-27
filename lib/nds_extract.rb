@@ -3,7 +3,20 @@ require 'directors_database'
 
 def directors_totals(nds)
   directors_db = directors_database
-  pp directors_db
+  hash_result = Hash.new()
+  
+  dir_iterator = 0
+  while dir_iterator < directors_db.size do
+    director = directors_db[dir_iterator]
+    
+    total_grosses = 0 
+    movies_array = director[:movies]
+    movies_iterator = 0 
+    
+    while movies_iterator < movies_array.size do
+      total_grosses += movies_array[movies_iterator][]
+    end
+  end
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
