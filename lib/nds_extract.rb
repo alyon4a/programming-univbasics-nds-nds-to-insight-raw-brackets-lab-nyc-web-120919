@@ -14,8 +14,10 @@ def directors_totals(nds)
     movies_iterator = 0 
     
     while movies_iterator < movies_array.size do
-      total_grosses += movies_array[movies_iterator][]
+      total_grosses += movies_array[movies_iterator][:worldwide_gross]
     end
+    
+    hash_result[director[:name]] => total_grosses
   end
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
